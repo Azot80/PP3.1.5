@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit user</title>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <h2> Редактирование user </h2>
+  </div>
+</div>
+
+<div>
+  <p>
+    <a href="/admin/index"><< Назад</a>
+  </p>
+</div>
+<div id="container">
+  <form th:method="PATCH" th:action="@{/admin/{id}(id=${editUser.getId()})}" th:object="${editUser}">
+    <table>
+      <tbody>
+      <tr>
+        <td><label>Имя: </label></td>
+        <td><input type="text" th:field="*{username}"/></td>
+      <tr/>
+      <tr>
+        <td><label>Фамилия: </label></td>
+        <td><input type="text" th:field="*{lastname}"/></td>
+      <tr/>
+      <tr>
+        <td><label>Возраст: </label></td>
+        <td><input type="text" th:field="*{age}"/></td>
+      <tr/>
+      <tr>
+        <td><label>е-mail: </label></td>
+        <td><input type="text" th:field="*{email}"/></td>
+      <tr/>
+      <tr>
+        <td><label>пароль: </label></td>
+        <td><input type="password" /></td>
+      <tr/>
+      <td><label>Роль: </label></td>
+      <td th:align="center" colspan="2">
+        <th:block th:each="role: ${roles}">
+          <input type="checkbox" th:field="*{roles}"
+                 th:text="${role.roleName}" th:value="${role.id}"/>
+        </th:block>
+      </td>
+
+      <tr>
+        <td><label></label></td>
+        <td><input type="submit" value="Изменить" class="save"/></td>
+      <tr/>
+      </tbody>
+    </table>
+  </form>
+</div>
+</body>
+</html>

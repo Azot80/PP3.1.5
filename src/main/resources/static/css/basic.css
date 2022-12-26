@@ -1,0 +1,29 @@
+.funny {
+    font-style: italic;
+    color: red;
+}
+
+.space{
+    padding: 20px;
+}
+
+.table-nav {
+    color: white;
+}
+
+.nav-logout{
+    color: white;
+    margin-left: auto;
+}
+
+a.logout {
+    color: white;
+}
+
+span.space {
+    padding: 5px;
+}
+
+span.user-mail {
+    font-weight: bold;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <title>Spring Security App Example</title>
+  <meta charset="utf-8">
+  <link rel='icon' th:href="@{/img/favicon.ico}" type='image/x-icon' sizes="48x48" />
+  <link rel="stylesheet" th:href="@{/css/basic.css}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div th:insert="/admin/navbar" ></div>
+
+<div class="container-fluid" style="padding-top: 20px;">
+  <div class="row">
+    <div class="col-2 px-0">
+      <div th:insert="/admin/left-side" ></div>
+    </div>
+
+    <div class="container secondary col-sm-10 px-0">
+      <div class="col-12 bg-light vh-100">
+          <div class="container">
+            <div><h2>Admin panel</h2>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="user-table" data-toggle="tab" href="#usertable" role="tab" aria-controls="usertable" aria-selected="true">Users table</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="new-user" data-toggle="tab" href="#newuser" role="tab" aria-controls="newuser" aria-selected="false">New user</a>
+              </li>
+
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div th:insert="/admin/userstable"  class="tab-pane fade show active" id="usertable" role="tabpanel" aria-labelledby="user-table"> </div>
+              <div th:insert="/admin/add-user" class="tab-pane fade" id="newuser" role="tabpanel" aria-labelledby="new-user">Add new user </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div th:insert="/admin/edit-form" class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true"></div>
+  <div th:insert="/admin/delete-form" class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true"></div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.all.min.js"></script>
+
+<script th:src="@{/js/main.js}"></script>
+
+
+</body>
+</html>

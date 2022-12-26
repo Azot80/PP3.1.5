@@ -1,0 +1,58 @@
+<div class="form-group">
+    <div class="control-group required">
+        <div class="card">
+<h5 class="card-header">Add new user</h5>
+<div class="container-fluid" style="padding-top: 20px;">
+    <form id="formNewUser" name="formNewUser">
+        <table class="container" style="max-width: 400px; ">
+            <tbody>
+            <tr>
+                <td th:align="center">
+                    <label class="font-weight-bold" >First name: </label>
+                </td>
+            <tr/>
+            <tr>
+                <td><input type="text" class="form-control font-weight-bold" name="username" id="newname" placeholder="First name" required /></td>
+            <tr/>
+            <tr>
+                <td th:align="center"><label class="font-weight-bold">Last name: </label></td>
+            <tr/>
+            <tr>
+                <td><input type="text" class="form-control font-weight-bold" name="lastname" id="newlastName" placeholder="Last name" required /></td>
+            <tr/>
+            <tr>
+                <td th:align="center"><label class="font-weight-bold">Age: </label></td>
+            <tr/>
+            <tr>
+                <td><input type="number" class="form-control font-weight-bold" name="age" id="newage" placeholder="Age" required  /></td>
+            <tr/>
+            <tr>
+                <td th:align="center"><label class="font-weight-bold">е-mail: </label></td>
+            <tr/>
+            <tr>
+                <td><input type="text" class="form-control font-weight-bold" name="email" id="newemail" placeholder="Email" required/></td>
+            <tr/>
+            <tr>
+                <td th:align="center"><label class="font-weight-bold">Password: </label></td>
+            <tr/>
+            <tr>
+                <td><input type="password" class="form-control" name="password" id="newpassword" placeholder="Password" required /></td>
+            <tr/>
+            <tr>
+                <td th:align="center" colspan="2">
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="newRoles">Roles</label>
+                        <select multiple size="2" id="newRoles" class="form-control" name="roles" required></select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td th:align="center"><button class="btn btn-success save" id="addUserButton" type="submit" />Add new user</button></td>
+            <tr/>
+            </tbody>
+        </table>
+    </form>
+</div>
+        </div>
+    </div>
+</div>

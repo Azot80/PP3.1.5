@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <table class="table-nav">
+    <tbody>
+    <tr>
+      <td>
+        <span class="user-mail" th:text="${user.getEmail}" id="headerUsername"> </span>
+      </td>
+      <td>
+        <span> with Roles:</span>
+      </td>
+      <td>
+        <th:block th:each="role : ${user.getRoles}" >
+          <span th:text="${role.getRoleName.substring(5)}" class="space" id="headerRoles"></span>
+        </th:block>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="nav-logout">
+    <a class="navbar-brand" href="/logout" style="color: darkgray; "> Logout</a>
+  </div>
+</nav>

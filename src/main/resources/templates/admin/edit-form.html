@@ -1,0 +1,62 @@
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <form id="formEditUser">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit user</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="form-group required">
+                    <div class="controls">
+                        <p>
+                            <label for="idEditUser"><strong>ID</strong>
+                                <input class="form-control" type="number" name="id" id="idEditUser" disabled/>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="firstNameEditUser"><strong>First name</strong>
+                                <input class="form-control" type="text" name="username" id="firstNameEditUser"/>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="lastNameEditUser"><strong>Last name</strong>
+                                <input class="form-control" type="text" name="lastname" id="lastNameEditUser"/>
+                            </label>
+                        </p>
+
+                        <p>
+                            <label for="ageEditUser"><strong>Age</strong>
+                                <input class="form-control" type="number" name="age" id="ageEditUser"/>
+                            </label>
+                        </p>
+
+                        <p>
+                            <label for="emailEditUser"><strong>Email</strong>
+                                <input class="form-control" type="email" name="email" id="emailEditUser" required/>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="passwordEditUser"><strong>Password</strong>
+                                <input class="form-control" type="password" name="password" id="passwordEditUser"/>
+                            </label>
+                        </p>
+                        <label class="container-fluid col-6" for="rolesEditUser"><strong>Role</strong>
+                            <select class="form-control" id="rolesEditUser" name="roles" multiple size="2">
+
+                            </select>
+                        </label>
+                        <h1></h1>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="editFormCloseButton" class="btn btn-secondary"
+                                data-dismiss="modal">Close
+                        </button>
+                        <button type="submit" class="btn btn-primary">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
